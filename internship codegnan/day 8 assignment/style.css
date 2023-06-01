@@ -1,0 +1,253 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300&display=swap');
+body{
+    margin: 0px;
+    padding: 0;
+    font-family: 'inter',sans-serif;
+    background-color: rgba(232, 236, 244, 0.474);
+}
+
+.navdiv{
+    
+   
+    display: flex;
+    align-items: center;    
+    justify-content: start;
+    padding-top: 25px;
+    padding-bottom: 25px;
+    padding-left: 90px;
+    background-color: #ffffff;    
+    box-shadow: 0 4px 2px -2px rgb(235, 229, 229);
+    
+
+}
+
+.logo img {
+
+    position: relative;
+    background-color: #ffffff;
+    
+}
+
+nav ul{
+    position: relative;
+    left: 50px;
+    background-color: #ffffff;
+}
+
+nav ul li{
+
+    list-style: none;
+    display: inline-block;
+    background-color: #ffffff;
+    
+
+}
+
+nav ul li a{
+
+    font-size: 17px;
+    color: #000;
+    font-weight: bolder;
+    text-decoration: none;
+    margin: 15px;
+    background-color: #ffffff;
+
+}
+
+span {
+    background-color: transparent;
+}
+
+nav ul li a:hover{
+
+    background-color: rgba(245, 245, 245, 0.582);
+
+}
+
+.signin{
+    position: relative;
+    left: 120px;
+    background: #00baf2;
+    padding: 2px 2px 2px 20px;
+    border-radius: 20px;
+    cursor: pointer;
+    display: -ms-flexbox;
+    display: flex;    
+    align-items: center;    
+    justify-content: flex-end;
+    font-size: 15px;
+    color: white;
+    font-weight: 600;
+}
+
+.signin:hover{
+    
+    background: navy;
+}
+
+.signin img{
+    margin-left: 9px;
+    border-radius: 50%;
+    width: 34px;
+    height: 34px;
+}
+
+.signin img:hover{
+
+    background-color: #00baf2;
+}
+
+
+.msg{
+    text-align: center;
+    font-weight: 500;
+    height: 30px;
+    background-color: rgba(8, 22, 47, 0.015);
+}
+.main{
+    padding-left: 120px;
+    margin-top: 100px;
+}
+.main h1{
+    font-size: 54px;
+    font-weight: 900;
+}
+.main .left .para{
+    width: 475px;
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 30px;
+    margin-bottom: 20px;
+}
+.play-btn{
+    color: white;
+    background-color: black;
+    height: 44px;
+    padding: 0 24px;
+    font-weight: 500;
+    width: 185px;
+    border: 1px solid black;
+    border-radius: 50px;
+    align-items: center;
+    justify-content: center;
+    line-height: 1;
+}
+.play-btn .btn{
+    font-size: 15px;
+}
+.play-btn:hover{
+    color: black;
+    background-color: white;
+}
+.main .left{
+    width: 40%;
+    float: left;
+}
+.main .right{
+    float: right;
+    display: inline;
+}
+.sec2{
+    clear: both;
+    background-color: #00baf2;
+    color: #fff;
+    border-top: 60px solid #fff;
+}
+.main1{
+    padding-left: 120px;
+}
+.main1 a img{
+    width: 64px;
+}
+.sub_head{
+    font-size: 26px;
+    color: #fff;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    padding-top: 30px;
+}
+.ele{
+    display: flex;
+    justify-content: space-between;
+    padding: 5px 200px 45px 0;
+    font-weight: bold;
+    text-decoration: none;
+    color: black;
+    font-size: 18px;
+    line-height: 30px;
+}
+.ele .ele1 a{
+    text-decoration: none;
+    color: #fff;
+}
+.ele .ele1{
+    width: 140px;
+    padding: 10px 0 10px 20px;
+    border-radius: 15px;
+}
+.ele .ele1:hover{
+    background-color: rgba(0, 0, 0, 0.1);
+}
+.main h2{
+    font-size: 48px;
+}
+.img{
+    width: 175px;
+    display: flex;    
+    align-items: flex-end;
+    font-size: 16px;
+    font-weight: 700;
+}
+.main h3{
+    font-size: 35px;
+}
+.main p{
+    font-size: 16px;
+    font-weight: 600;
+}
+.left1{
+    width: 30%;
+    padding: 50px 120px;
+    float: left;
+}
+.box{
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    background-color: #fff;
+    width: 90%;
+    height: 650px;
+}
+.box img{
+    padding-top: 80px;
+}
+.learn-btn{
+    color: white;
+    background-color: #002970;
+    height: 44px;
+    padding: 0 24px;
+    font-weight: 500;
+    width: 105px;
+    border: 1px solid rgba(0, 0, 0, 0);
+    border-radius: 50px;
+    align-items: center;
+    justify-content: center;
+    line-height: 1;
+}
+.learn-btn:hover{
+    background-color: #00baf2;
+}
+.box2{
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    background-color: #fff;
+    width: 45%;
+    height: 650px;
+    overflow: hidden;
+}
+.content2{
+    padding: 40px 70px 0 90px;
+}
+.sec4{
+    clear: both;
+}
