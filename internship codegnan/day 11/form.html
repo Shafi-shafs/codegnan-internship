@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form onsubmit="return validation()" action="https://www.flipkart.com/?affid=affveve&affExtParam1=e839860ab2600bcac02e0adf8879e091&affExtParam2=60827">
+        <input type="text" placeholder="enter" id="enter">
+        <p><input type="number" placeholder="mobilenumber" id="mobilenumber"></p>
+        <input type="text" placeholder="email" id="email">
+        <button>submit</button>
+    </form>
+    <script>
+        function validation(){
+            var hello=document.getElementById("enter").value
+            var helloCheck=/^[a-zA-Z]+$/
+            var mobile=document.getElementById("mobilenumber").value
+            var mobilecheck=/^[0-9]{10}$/
+            var email=document.getElementById("email").value
+            var emailcheck=/^[a-z0-9.#]+@[a-z]+\.[a-z]{2,3}$/
+            
+            if(hello==""|hello.length<3){
+
+                alert("please enter values")            
+                return false
+            }
+            if(!hello.match(helloCheck)){
+                alert("name must carry only alphabets")
+                return false
+            }
+            
+            if(!mobile.match(mobilecheck)){
+                alert("pleasecheck your mobilenumber")
+                return false
+            }
+            if(!email.match(emailcheck)){
+
+                alert("check your email")
+                return false
+            }
+
+            return true
+        }
+    </script>
+</body>
+</html>
