@@ -7,10 +7,12 @@ import Contact from './components/Contact';
 import Navigation from './components/Navigation';
 import Process from './components/Process';
 import Comm from './components/Comm';
-import Footer from './components/Footer'
+import Footer from './components/Footer';
+import Admin from './components/admin';
 import  './App.css'
 import 'mdb-react-ui-kit/dist/css/mdb.min.css';
 import "@fortawesome/fontawesome-free/css/all.min.css";
+import Login from './components/login';
 
 class App extends React.Component {
   render() {
@@ -18,7 +20,7 @@ class App extends React.Component {
       <div>
 
         <Navigation/>
-        {/* <h1>Save Food Fundation</h1>         */}
+        
         <BrowserRouter>
         <Routes>
           <Route path='/Home' element={<Home/>}/>
@@ -26,6 +28,8 @@ class App extends React.Component {
           <Route path='/Process' element={<Process/>}/>
           <Route path='/Comm' element={<Comm/>}/>
           <Route path='/Contact' element={<Contact/>}/>
+          <Route path='/Admin' element={<Admin/>}/>
+          <Route path='/Login' element ={<Login/>}/>
         </Routes> 
         </BrowserRouter>  
         

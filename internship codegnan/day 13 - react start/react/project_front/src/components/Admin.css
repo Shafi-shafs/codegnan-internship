@@ -1,0 +1,29 @@
+table{
+
+    text-align: center;
+    margin: 0 auto;
+    border: 1px solid black;
+    margin-bottom: 40px;
+}
+
+.th{
+
+    padding-left: 40px;
+    padding-right : 40px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border: 1px solid black;
+    background-color: aquamarine;
+    font-weight: 700;
+}
+
+.td{
+
+    padding-left: 40px;
+    padding-right : 40px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border: 1px solid black;
+    background-color: antiquewhite;
+    font-weight: 500;
+}

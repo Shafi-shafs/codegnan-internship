@@ -1,0 +1,12 @@
+POST http://localhost:4000/app/contact
+Content-Type: application/json
+
+{
+    "fullName":"shafi mohammad",
+    "location":"machilipatnam",
+    "mobile": 7993241615,
+    "mail": "shafs@gmail.com",
+    "map": "helloword"
+}
+
+

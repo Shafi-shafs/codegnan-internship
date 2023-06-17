@@ -1,41 +1,152 @@
-import 'mdb-react-ui-kit/dist/css/mdb.min.css';
-import "@fortawesome/fontawesome-free/css/all.min.css";
+import React from 'react';
+import { Component } from 'react';
+import '../components/Contact.css'
+import 'bootstrap/dist/css/bootstrap.min.css'
+import axios from 'axios';
 import '../components/Contact.css'
 
-import React from 'react';
-import { MDBInput, MDBCheckbox, MDBBtn, MDBValidation, MDBValidationItem, MDBTextArea } from 'mdb-react-ui-kit';
 
-export default function App() {
-  return (
-    <div className="contact">
-      <MDBValidation noValidate id='form' className='text-center' style={{ width: '100%', maxWidth: '300px' }}>
-      <h2>Contact us</h2>
 
-      <MDBValidationItem invalid feedback='Please provide your name.'>
-        <MDBInput label='Name' v-model='name' wrapperClass='mb-4' required />
-      </MDBValidationItem>
+class Contact extends Component {
 
-      <MDBValidationItem invalid feedback='Please provide your email.'>
-        <MDBInput type='email' label='Email address' v-model='email' wrapperClass='mb-4' required />
-      </MDBValidationItem>
+  constructor() {
+    super()
+    this.state = {
+      fullName: '',
+      location: '',
+      mobile: '',
+      mail:'',
+      map:''
+    }
+    this.changeFullName = this.changeFullName.bind(this)
+    this.changeLocation = this.changeLocation.bind(this)
+    this.changeMobileNumber = this.changeMobileNumber.bind(this)
+    this.changeYourMail= this.changeYourMail.bind(this)
+    this.changePinGoogleLocation=this.changePinGoogleLocation.bind(this)
+    this.onSubmit = this.onSubmit.bind(this)
+  }
 
-      <MDBValidationItem invalid feedback='Please provide mail subject.'>
-        <MDBInput label='Subject' v-model='subject' wrapperClass='mb-4' required />
-      </MDBValidationItem>
+  changeFullName(event) {
 
-      <MDBValidationItem invalid feedback='Please provide a message text.'>
-        <MDBTextArea wrapperClass='mb-4' label='Message' required />
-      </MDBValidationItem>
+    this.setState({
+      fullName: event.target.value
+    })
+  }
 
-      <MDBValidationItem feedback=''>
-        <MDBCheckbox wrapperClass='d-flex justify-content-center' label='Send me copy' />
-      </MDBValidationItem>
+  changeLocation(event) {
 
-      <MDBBtn type='submit' color='primary' block className='my-4'>
-        Send
-      </MDBBtn>
-    </MDBValidation>
-    </div>
-    
-  );
+    this.setState({
+      location: event.target.value
+    })
+  }
+
+  changeMobileNumber(event) {
+
+    this.setState({
+      mobile: event.target.value
+    })
+  }
+
+  changeYourMail(event) {
+
+    this.setState({
+      mail: event.target.value
+    })
+  }
+
+  changePinGoogleLocation(event) {
+
+    this.setState({
+      map: event.target.value
+    })
+  }
+
+  onSubmit(event) {
+    event.preventDefault()
+
+    const contact = {
+      fullName: this.state.fullName,
+      location: this.state.location,
+      mobile: this.state.mobile,
+      mail:this.state.mail,
+      map:this.state.map
+    }
+
+    axios.post('http://localhost:4000/app/contact', contact)
+      .then(Response => console.log(Response.data))
+
+
+    this.setState({
+      fullName: '',
+      location: '',
+      mobile: '',
+      mail:'',
+      map:''
+    })
+
+  }
+
+  
+
+  render() {
+
+    return (
+
+      <div className='main'>
+
+        <div className="contactus">
+          <h1 className=''>Contact US</h1>
+          <div className="continer ">
+            <div className="form-div">
+              <form onSubmit={this.onSubmit}>
+                <input type='text'
+                  placeholder='FullName'
+                  onChange={this.changeFullName}
+                  value={this.state.fullName}
+                  className='form-control form-group'
+                />
+
+                <input type='text'
+                  placeholder='Location'
+                  onChange={this.changeLocation}
+                  value={this.state.location}
+                  className='form-control form-group'
+                />
+
+                <input type='number'
+                  placeholder='MobileNumber'
+                  onChange={this.changeMobileNumber}
+                  value={this.state.mobile}
+                  className='form-control form-group'
+                />
+
+                <input type='email'
+                  placeholder='YourMail'
+                  onChange={this.changeYourMail}
+                  value={this.state.mail}
+                  className='form-control form-group'
+                />
+
+                <input type='text'
+                  placeholder='PinGoogleLocation'
+                  onChange={this.changePinGoogleLocation}
+                  value={this.state.map}
+                  className='form-control form-group'
+                />
+
+                <input type='submit' className='btn btn-block' value='Submit' />
+
+              </form>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+
+    )
+  }
 }
+
+export default Contact;
+

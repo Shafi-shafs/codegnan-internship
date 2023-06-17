@@ -23,7 +23,7 @@ function NavScrollExample() {
             <Nav.Link className='Navlink' href="./Process">Process</Nav.Link>
             <Nav.Link className='Navlink' href="./Comm">Feedback</Nav.Link>
             <Nav.Link className='Navlink' href="./Contact">Donate Food</Nav.Link>
-            <Button className='login' href='https://th.bing.com/th/id/OIP.5SV0UHFB3xr96dp5u_3lnQHaHa?pid=ImgDet&rs=1 ' variant="success">Login</Button>{' '}
+            <Button className='login' href="./Login" variant="success"><span>Admin</span></Button>
 
 
           </Nav>

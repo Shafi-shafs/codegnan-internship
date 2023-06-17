@@ -1,0 +1,51 @@
+.divider:after,
+.divider:before {
+  content: "";
+  flex: 1;
+  height: 1px;
+  background: #eee;
+}
+.h-custom {
+  height: calc(100% - 73px);
+}
+@media (max-width: 450px) {
+  .h-custom {
+  height: 100%;
+  }
+}
+
+.in{
+
+    width: 300px;
+    margin-bottom: 20px;
+}
+
+.log{
+
+    position: relative;
+    align-items: center;
+    height: 470px;
+    width: 600px;
+    top: 14px;
+    left: 45px;
+    background-color: whitesmoke;
+    border: 5px solid rgb(47, 146, 22);
+    border-radius: 10%;
+}
+
+.log h1{
+
+    color: rgb(47, 146, 22) ;
+}
+
+.log h1 span{
+
+    color: rgb(230, 27, 128) ;
+}
+
+.items{
+
+    position: relative;
+    top: 40px;
+    left: 130px;
+}
